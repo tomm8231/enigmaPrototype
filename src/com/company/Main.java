@@ -6,27 +6,30 @@ public class Main {
         'I', 'J', 'K', 'L', 'M' , 'N', 'O', 'P', 'Q', 'R', 'S',
         'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Æ', 'Ø', 'Å'};
 
-   /* public char ceasarCryptLetterToNumber(char text, int shift) {
 
+    public int ceasarCryptLetterToNumber(char letter) {
+        int number = 0;
+
+        for(int i = 0; i < letters.length; i++) {
+            if (letters[i] == letter) {
+                number = i;
+            }
+        }
+        return number;
     }
 
-    /* public int ceasarCryptNumberToLetter(char text, int shift) {
-
+    public char ceasarCryptNumberToLetter(int number) {
+        char letter = letters[number];
+        return letter;
     }
-
-    */
 
     public static void main(String[] args) {
-        Main obj = new Main();
+    Main obj = new Main();
 
-        //char testLetter = obj.ceasarCryptLetterToNumber('A',3);
-       // System.out.println(testLetter);
+    int testNumber = obj.ceasarCryptLetterToNumber('T');
+    System.out.println(testNumber);
 
-        //int testNumber = obj.ceasarCryptNumberToLetter('A',3);
-        //System.out.println(testNumber);
-
-
-
-
+    char testLetter = obj.ceasarCryptNumberToLetter(5);
+    System.out.println(testLetter);
     }
 }
