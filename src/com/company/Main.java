@@ -8,28 +8,27 @@ public class Main {
 
 
     public int ceasarCryptLetterToNumber(char letter) {
-        int number = 0;
+        int numberTemp = 0;
 
         for(int i = 0; i < letters.length; i++) {
             if (letters[i] == letter) {
-                number = i;
+                numberTemp = i;
             }
         }
-        return number;
+        return numberTemp;
     }
 
     public char ceasarCryptNumberToLetter(int number) {
-        char letter = letters[number];
-        return letter;
+        char letterTemp = letters[number];
+        return letterTemp;
     }
 
     public static void main(String[] args) {
     Main obj = new Main();
 
-    int testNumber = obj.ceasarCryptLetterToNumber('T');
-    System.out.println(testNumber);
+    int letterToNumber = obj.ceasarCryptLetterToNumber('T');
 
-    char testLetter = obj.ceasarCryptNumberToLetter(5);
-    System.out.println(testLetter);
+    char numberToLetter = obj.ceasarCryptNumberToLetter(5);
+
     }
 }
